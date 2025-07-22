@@ -124,12 +124,9 @@
     <!-- Sección Hero con Parallax y Fondo de Video -->
     <section id="hero" class="parallax-section relative h-screen flex items-center justify-center text-center text-white pt-16">
         <!-- Fondo de Video -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-            <!-- Video de YouTube incrustado (sin cookies) -->
-            <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="absolute inset-0 w-full h-full object-cover"></iframe>
-            <!-- Fallback para navegadores que no soportan la etiqueta de video -->
-            Tu navegador no soporta videos de YouTube.
-        </video>
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+            <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="absolute top-1/2 left-1/2 w-[180vw] h-[180vh] -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"></iframe>
+        </div>
         <div class="absolute inset-0 bg-black opacity-60 z-10"></div> <!-- Superposición para legibilidad del texto -->
         <div class="container mx-auto px-4 z-20">
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Plataformas Digitales para tu Crecimiento</h1>
