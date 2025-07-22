@@ -81,6 +81,28 @@
         .glow-text {
             text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
         }
+
+        /* Ajuste para el iframe de YouTube para cubrir completamente */
+        .youtube-iframe-cover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* Aumentar el tamaño para asegurar que no haya bordes negros en ninguna proporción */
+            min-width: 200%; /* Ajustado para mayor zoom */
+            min-height: 200%; /* Ajustado para mayor zoom */
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
+        }
+
+        /* Responsive adjustments for the iframe if needed, though min-width/height should handle most cases */
+        @media (max-width: 768px) {
+            .youtube-iframe-cover {
+                min-width: 250%; /* Mayor zoom para móviles si es necesario */
+                min-height: 250%; /* Mayor zoom para móviles si es necesario */
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -125,19 +147,18 @@
     <section id="hero" class="parallax-section relative h-screen flex items-center justify-center text-center text-white pt-16">
         <!-- Fondo de Video -->
         <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
-            <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="absolute top-1/2 left-1/2 w-[180vw] h-[180vh] -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"></iframe>
+            <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen class="youtube-iframe-cover"></iframe>
         </div>
-        <div class="absolute inset-0 bg-black opacity-60 z-10"></div> <!-- Superposición para legibilidad del texto -->
-        <div class="container mx-auto px-4 z-20">
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 drop-shadow-lg">Plataformas Digitales para tu Crecimiento</h1>
-            <p class="text-base md:text-lg max-w-3xl mx-auto mb-8 drop-shadow-md">
-                Tu presencia digital es más que una simple página; es el motor de tu estrategia. Construyo plataformas web a medida que no solo se ven increíbles, sino que están diseñadas para atraer clientes, generar ingresos y posicionar tu marca.
-            </p>
-            <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-base">
+        <!-- Superposición para legibilidad del texto (opacidad ajustada) -->
+        <div class="absolute inset-0 bg-black opacity-40 z-10"></div> 
+        <div class="container mx-auto px-4 z-20 flex flex-col items-center justify-end h-full pb-8">
+            <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs">
                 Descubre Nuestros Planes
             </a>
+            <p class="text-xs md:text-sm font-light leading-tight mt-4 mb-0 drop-shadow-lg">
+                Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!
+            </p>
         </div>
-        <!-- El carrusel de imágenes ha sido eliminado para dar protagonismo al video de fondo -->
     </section>
 
     <!-- Sección de Productos con Parallax -->
