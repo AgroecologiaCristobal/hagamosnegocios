@@ -93,16 +93,16 @@
             transform: translate(-50%, -50%);
             object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
             /* Aumentamos el tamaño base para asegurar que cubra toda la sección */
-            min-width: 150vw; /* Ajuste para zoom inicial en desktop */
-            min-height: 150vh; /* Ajuste para zoom inicial en desktop */
+            min-width: 175vw; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
+            min-height: 175vh; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
         }
 
         /* Responsive adjustments for the iframe */
         @media (max-width: 768px) {
             .youtube-iframe-cover {
-                /* Para móviles, un zoom más moderado */
-                min-width: 120vw; /* Ajustado para móviles */
-                min-height: 120vh; /* Ajustado para móviles */
+                /* Para móviles, un zoom más moderado pero que aún cubra */
+                min-width: 150vw; /* Ajustado para móviles */
+                min-height: 150vh; /* Ajustado para móviles */
             }
         }
     </style>
