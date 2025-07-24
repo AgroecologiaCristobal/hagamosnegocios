@@ -44,7 +44,7 @@
         /* La imagen de fondo para el hero ahora es manejada por el video */
         .parallax-products {
             /* Se actualizó la imagen de fondo para la sección de productos */
-            background-image: url('pantallaconcodigoparallax.jpeg');
+            background-image: url('pantallaconcodigoparaparallax.jpeg');
         }
         /* Barra de desplazamiento personalizada para una mejor estética */
         ::-webkit-scrollbar {
@@ -88,21 +88,20 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100vw; /* Usamos viewport width */
-            height: 100vh; /* Usamos viewport height */
+            /* Aumentar el tamaño para asegurar que no haya bordes negros en ninguna proporción */
+            min-width: 200%; /* Ajustado para mayor zoom */
+            min-height: 200%; /* Ajustado para mayor zoom */
+            width: auto;
+            height: auto;
             transform: translate(-50%, -50%);
             object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
-            /* Aumentamos el tamaño base para asegurar que cubra toda la sección */
-            min-width: 175vw; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
-            min-height: 175vh; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
         }
 
-        /* Responsive adjustments for the iframe */
+        /* Responsive adjustments for the iframe if needed, though min-width/height should handle most cases */
         @media (max-width: 768px) {
             .youtube-iframe-cover {
-                /* Para móviles, un zoom más moderado pero que aún cubra */
-                min-width: 150vw; /* Ajustado para móviles */
-                min-height: 150vh; /* Ajustado para móviles */
+                min-width: 250%; /* Mayor zoom para móviles si es necesario */
+                min-height: 250%; /* Mayor zoom para móviles si es necesario */
             }
         }
     </style>
@@ -121,7 +120,7 @@
         <nav class="container mx-auto flex justify-between items-center">
             <div class="text-xl font-bold text-blue-600">
                 <!-- Logo de Hagamos Negócios.cl -->
-                <img src="logo hagamos negocios .png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2">
+                <img src="logo hagamos negocios .png" alt="Logo Hagamos Negócios.cl" class="h-8 inline-block mr-2">
                 <!-- Se eliminó el texto "Plataformas Digitales" -->
             </div>
             <ul class="hidden md:flex space-x-4 text-sm">
