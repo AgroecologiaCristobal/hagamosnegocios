@@ -41,9 +41,7 @@
             overflow: hidden; /* Oculta el desbordamiento para el efecto parallax */
         }
         /* Imágenes de fondo específicas para el parallax */
-        /* La imagen de fondo para el hero ahora es manejada por el video */
         .parallax-products {
-            /* Se actualizó la imagen de fondo para la sección de productos */
             background-image: url('pantallaconcodigoparallax.jpeg');
         }
         /* Barra de desplazamiento personalizada para una mejor estética */
@@ -88,21 +86,35 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100vw; /* Usamos viewport width */
-            height: 100vh; /* Usamos viewport height */
+            width: 100%; /* El iframe ahora toma el 100% del ancho de su contenedor */
+            height: 100%; /* El iframe ahora toma el 100% de la altura de su contenedor */
             transform: translate(-50%, -50%);
             object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
-            /* Aumentamos el tamaño base para asegurar que cubra toda la sección */
-            min-width: 175vw; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
-            min-height: 175vh; /* Ajustado para mayor zoom en desktop y evitar bordes negros */
+            /* Ajustes de min-width/min-height para asegurar cobertura sin zoom excesivo */
+            min-width: 120%; 
+            min-height: 120%; 
         }
 
         /* Responsive adjustments for the iframe */
+        @media (min-aspect-ratio: 16/9) {
+            .youtube-iframe-cover {
+                height: 100%;
+                width: calc(100vh * 16 / 9); /* Ajusta el ancho para mantener el 16:9 y cubrir */
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+            .youtube-iframe-cover {
+                width: 100%;
+                height: calc(100vw * 9 / 16); /* Ajusta la altura para mantener el 16:9 y cubrir */
+            }
+        }
+
         @media (max-width: 768px) {
             .youtube-iframe-cover {
                 /* Para móviles, un zoom más moderado pero que aún cubra */
-                min-width: 150vw; /* Ajustado para móviles */
-                min-height: 150vh; /* Ajustado para móviles */
+                min-width: 120%; /* Ajustado para móviles */
+                min-height: 120%; /* Ajustado para móviles */
             }
         }
     </style>
