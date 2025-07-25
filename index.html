@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl</title>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Impulsa tu negocio con plataformas digitales a medida. Creamos sitios web profesionales, e-commerce y aplicaciones web para atraer clientes, generar ingresos y posicionar tu marca en Chile. ¡Contáctanos hoy!">
+    <meta name="description" content="Impulsa tu negocio con plataformas digitales a medida. Creamos sitios web profesionales, e-commerce y aplicaciones web para atraer clientes, generar ingresos y y posicionar tu marca en Chile. ¡Contáctanos hoy!">
     <meta name="keywords" content="páginas web, desarrollo web, diseño web, e-commerce, tienda online, aplicaciones web, SEO, marketing digital, presencia digital, Chile, Pucón, Starlink, Hagamos Negócios.cl">
     <meta name="author" content="Hagamos Negócios.cl">
     <meta name="robots" content="index, follow">
@@ -97,8 +97,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             /* Aseguramos que el video siempre cubra el contenedor */
-            width: 100%;
-            height: 100%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
             object-fit: cover; /* Recorta el video para cubrir el área */
             /* Escalar un poco más para evitar cualquier borde negro en proporciones extremas */
             transform: translate(-50%, -50%) scale(1.2); /* Aumentado ligeramente para mayor seguridad */
@@ -123,7 +125,7 @@
     </a>
 
     <!-- Sección de Encabezado -->
-    <header class="bg-white shadow-md py-4 px-6 fixed w-full top-0 z-40">
+    <header class="bg-white shadow-md py-1 px-6 fixed w-full top-0 z-40"> <!-- py-1 para reducir la altura -->
         <nav class="container mx-auto flex justify-between items-center">
             <div class="text-xl font-bold text-blue-600">
                 <!-- Logo de Hagamos Negócios.cl -->
@@ -151,14 +153,15 @@
         </div>
     </header>
 
-    <!-- Sección Hero con Parallax y Fondo de Video -->
+    <!-- Sección Hero con Parallax y Video de Fondo -->
     <section id="hero" class="parallax-section relative h-screen flex items-center justify-center text-center text-white">
-        <!-- Fondo de Video -->
+        <!-- Contenedor para el video de fondo -->
         <div class="video-background-container">
             <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
         </div>
-        <!-- Contenido de la sección Hero -->
-        <div class="container mx-auto px-4 z-20 flex flex-col items-center justify-end h-full pb-8 pt-20 md:pt-24"> <!-- Ajustado pt para dejar espacio al header -->
+        <!-- Superposición para legibilidad del texto -->
+        <div class="absolute inset-0 bg-black opacity-40 z-10"></div> 
+        <div class="container mx-auto px-4 z-20 flex flex-col items-center justify-end h-full pb-8 pt-20 md:pt-24">
             <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs">
                 Descubre Nuestros Planes
             </a>
@@ -342,6 +345,38 @@
                 }
             });
         });
+
+        // JavaScript para el carrusel de imágenes en la sección hero
+        // Este script ya no es necesario para un fondo de video estático, pero se mantiene si se desea reutilizarlo.
+        // let slideIndex = 0;
+        // const carouselItems = document.querySelectorAll('#hero-carousel .carousel-item');
+        // const totalSlides = carouselItems.length;
+        // let carouselInterval;
+
+        // function showSlides(n) {
+        //     if (totalSlides === 0) return;
+        //     carouselItems.forEach(item => {
+        //         item.classList.remove('active');
+        //     });
+        //     if (n >= totalSlides) { slideIndex = 0 }
+        //     if (n < 0) { slideIndex = totalSlides - 1 }
+        //     carouselItems[slideIndex].classList.add('active');
+        // }
+
+        // function startCarousel() {
+        //     if (carouselInterval) {
+        //         clearInterval(carouselInterval);
+        //     }
+        //     carouselInterval = setInterval(() => {
+        //         slideIndex++;
+        //         showSlides(slideIndex);
+        //     }, 5000);
+        // }
+
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     showSlides(slideIndex);
+        //     startCarousel();
+        // });
     </script>
 </body>
 </html>
