@@ -31,14 +31,8 @@
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden; /* Evita el desplazamiento horizontal debido al desbordamiento del parallax */
-            padding-top: 64px; /* Espacio para el header fijo en móviles */
+            /* Eliminado padding-top del body para que la sección hero inicie desde arriba */
         }
-        @media (min-width: 768px) {
-            body {
-                padding-top: 80px; /* Espacio para el header fijo en desktop */
-            }
-        }
-
         .parallax-section {
             background-attachment: fixed;
             background-position: center;
@@ -179,7 +173,7 @@
     </section>
 
     <!-- Sección de Productos con Parallax -->
-    <section id="productos" class="parallax-section parallax-products py-16 px-4 relative mt-0"> <!-- Eliminado mt-16/mt-20 -->
+    <section id="productos" class="parallax-section parallax-products py-16 px-4 relative">
         <!-- Fondo de imagen con transparencia -->
         <div class="absolute inset-0" style="background-image: url('pantallaconcodigoparallax.jpeg'); background-size: cover; background-position: center; opacity: 0.3;"></div>
         <!-- Capa de color morado para mantener el tono principal y permitir que la imagen se vea a través -->
@@ -212,7 +206,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
                             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
                         </svg>
-                        ¡Lo Quiero Ahora! (WhatsApp)
+                        ¡Impulsa tus Ventas! (WhatsApp)
                     </a>
                 </div>
 
