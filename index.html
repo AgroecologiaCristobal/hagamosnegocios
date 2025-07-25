@@ -102,11 +102,11 @@
         ¡Producto añadido al carrito!
     </div>
 
-    <!-- Encabezado Fijo -->
-    <header class="bg-white shadow-md py-1 px-6 fixed w-full top-0 z-40">
+    <!-- Encabezado Fijo con Glassmorphism -->
+    <header class="bg-white/75 backdrop-blur-md shadow-md py-1 px-6 fixed w-full top-0 z-40">
         <nav class="container mx-auto flex justify-between items-center">
             <a href="#hero" class="text-xl font-bold text-blue-600">
-                <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
+                <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2 opacity-75 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
             </a>
             <div class="flex items-center space-x-4">
                 <ul class="hidden md:flex space-x-4 text-sm">
@@ -124,7 +124,7 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-white/75 backdrop-blur-md pb-4">
             <ul class="flex flex-col space-y-2 items-center text-base">
                 <li><a href="#hero" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
                 <li><a href="#productos" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
