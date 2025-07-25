@@ -97,17 +97,21 @@
             left: 50%;
             transform: translate(-50%, -50%);
             /* Ajustes para asegurar que el video siempre cubra el contenedor */
-            width: 175%; /* Aumentado para asegurar que cubra completamente */
-            height: 175%; /* Aumentado para asegurar que cubra completamente */
+            width: 100%;
+            height: 100%;
             object-fit: cover; /* Asegura que el video cubra el área sin distorsión */
+            /* Aumentar el tamaño para asegurar que siempre desborde y no haya bordes negros */
+            min-width: 100vw; /* Asegura que cubra al menos el ancho del viewport */
+            min-height: 100vh; /* Asegura que cubra al menos el alto del viewport */
+            /* Escalar un poco más para evitar cualquier borde negro en proporciones extremas */
+            transform: translate(-50%, -50%) scale(1.1); 
         }
 
         /* Ajustes específicos para móviles y pantallas más pequeñas */
         @media (max-width: 768px) {
             .video-background-container iframe {
-                /* Para móviles, asegurar que el video cubra sin zoom excesivo */
-                width: 200%; /* Mayor zoom para móviles si es necesario */
-                height: 200%; /* Mayor zoom para móviles si es necesario */
+                /* Para móviles, un zoom más moderado pero que aún cubra */
+                transform: translate(-50%, -50%) scale(1.2); /* Ligeramente más zoom en móviles */
             }
         }
     </style>
