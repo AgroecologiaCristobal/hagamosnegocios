@@ -31,7 +31,14 @@
         body {
             font-family: 'Inter', sans-serif;
             overflow-x: hidden; /* Evita el desplazamiento horizontal debido al desbordamiento del parallax */
+            padding-top: 64px; /* Espacio para el header fijo en móviles */
         }
+        @media (min-width: 768px) {
+            body {
+                padding-top: 80px; /* Espacio para el header fijo en desktop */
+            }
+        }
+
         .parallax-section {
             background-attachment: fixed;
             background-position: center;
@@ -172,7 +179,7 @@
     </section>
 
     <!-- Sección de Productos con Parallax -->
-    <section id="productos" class="parallax-section parallax-products py-16 px-4 relative">
+    <section id="productos" class="parallax-section parallax-products py-16 px-4 relative mt-0"> <!-- Eliminado mt-16/mt-20 -->
         <!-- Fondo de imagen con transparencia -->
         <div class="absolute inset-0" style="background-image: url('pantallaconcodigoparallax.jpeg'); background-size: cover; background-position: center; opacity: 0.3;"></div>
         <!-- Capa de color morado para mantener el tono principal y permitir que la imagen se vea a través -->
@@ -345,38 +352,6 @@
                 }
             });
         });
-
-        // JavaScript para el carrusel de imágenes en la sección hero
-        // Este script ya no es necesario para un fondo de video estático, pero se mantiene si se desea reutilizarlo.
-        // let slideIndex = 0;
-        // const carouselItems = document.querySelectorAll('#hero-carousel .carousel-item');
-        // const totalSlides = carouselItems.length;
-        // let carouselInterval;
-
-        // function showSlides(n) {
-        //     if (totalSlides === 0) return;
-        //     carouselItems.forEach(item => {
-        //         item.classList.remove('active');
-        //     });
-        //     if (n >= totalSlides) { slideIndex = 0 }
-        //     if (n < 0) { slideIndex = totalSlides - 1 }
-        //     carouselItems[slideIndex].classList.add('active');
-        // }
-
-        // function startCarousel() {
-        //     if (carouselInterval) {
-        //         clearInterval(carouselInterval);
-        //     }
-        //     carouselInterval = setInterval(() => {
-        //         slideIndex++;
-        //         showSlides(slideIndex);
-        //     }, 5000);
-        // }
-
-        // document.addEventListener('DOMContentLoaded', () => {
-        //     showSlides(slideIndex);
-        //     startCarousel();
-        // });
     </script>
 </body>
 </html>
