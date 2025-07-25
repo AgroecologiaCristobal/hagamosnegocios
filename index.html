@@ -1,29 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl</title>
     
+    <!-- SEO Meta Tags -->
     <meta name="description" content="Impulsa tu negocio con plataformas digitales a medida. Creamos sitios web profesionales, e-commerce y aplicaciones web para atraer clientes, generar ingresos y posicionar tu marca en Chile. ¡Contáctanos hoy!">
     <meta name="keywords" content="páginas web, desarrollo web, diseño web, e-commerce, tienda online, aplicaciones web, SEO, marketing digital, presencia digital, Chile, Pucón, Starlink, Hagamos Negócios.cl">
     <meta name="author" content="Hagamos Negócios.cl">
     <meta name="robots" content="index, follow">
 
+    <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tudominio.cl/"> <meta property="og:title" content="Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl">
+    <meta property="og:url" content="https://www.tudominio.cl/"> <!-- Reemplaza con tu URL real -->
+    <meta property="og:title" content="Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl">
     <meta property="og:description" content="Impulsa tu negocio con plataformas digitales a medida. Creamos sitios web profesionales, e-commerce y aplicaciones web para atraer clientes, generar ingresos y posicionar tu marca en Chile. ¡Contáctanos hoy!">
-    <meta property="og:image" content="https://placehold.co/1200x630/1a202c/ffffff?text=Plataformas+Digitales"> <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://www.tudominio.cl/"> <meta property="twitter:title" content="Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a202c/ffffff?text=Plataformas+Digitales"> <!-- Reemplaza con una imagen representativa -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.tudominio.cl/"> <!-- Reemplaza con tu URL real -->
+    <meta property="twitter:title" content="Plataformas Digitales para tu Crecimiento - Hagamos Negócios.cl">
     <meta property="twitter:description" content="Impulsa tu negocio con plataformas digitales a medida. Creamos sitios web profesionales, e-commerce y aplicaciones web para atraer clientes, generar ingresos y posicionar tu marca en Chile. ¡Contáctanos hoy!">
-    <meta property="twitter:image" content="https://placehold.co/1200x630/1a202c/ffffff?text=Plataformas+Digitales"> <script src="https://cdn.tailwindcss.com"></script>
+    <meta property="twitter:image" content="https://placehold.co/1200x630/1a202c/ffffff?text=Plataformas+Digitales"> <!-- Reemplaza con una imagen representativa -->
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* Estilos personalizados para la fuente Inter y funcionalidades específicas */
         body {
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
+            overflow-x: hidden; /* Previene el desbordamiento horizontal */
         }
 
         /* Barra de desplazamiento personalizada */
@@ -79,189 +92,204 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+            z-index: -1; /* Asegura que esté detrás del contenido */
         }
         .video-background-container iframe {
             position: absolute;
             top: 50%;
             left: 50%;
-            min-width: 100%;
-            min-height: 100%;
             width: auto;
             height: auto;
-            transform: translate(-50%, -50%) scale(1.2);
-            object-fit: cover;
+            min-width: 100%;
+            min-height: 100%;
+            /* Zoom aumentado en un 10% */
+            transform: translate(-50%, -50%) scale(1.32); /* Escala para cubrir (antes 1.2) */
+            pointer-events: none; /* Evita que el iframe capture clics */
         }
+        
+        /* Ajuste específico para móviles para asegurar que el video cubra toda la pantalla verticalmente */
         @media (max-width: 768px) {
             .video-background-container iframe {
-                transform: translate(-50%, -50%) scale(1.3); 
+                /* Un escalado mayor para pantallas de móviles, aumentado en un 10% */
+                transform: translate(-50%, -50%) scale(1.65); /* antes 1.5 */
             }
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+    <!-- Botón flotante de WhatsApp -->
     <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20saber%20más%20sobre%20sus%20servicios%20web." target="_blank" class="whatsapp-float fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 z-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
         </svg>
     </a>
 
+    <!-- Encabezado Fijo -->
     <header class="bg-white shadow-md py-1 px-6 fixed w-full top-0 z-40">
         <nav class="container mx-auto flex justify-between items-center">
-            <div class="text-xl font-bold text-blue-600">
-                <img src="logo hagamos negocios .png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2">
-            </div>
+            <!-- Logo -->
+            <a href="#hero" class="text-xl font-bold text-blue-600">
+                <img src="logo hagamos negocios .png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
+            </a>
+            <!-- Navegación de Escritorio -->
             <ul class="hidden md:flex space-x-4 text-sm">
                 <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
                 <li><a href="#productos" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
                 <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
             </ul>
+            <!-- Botón de Menú Móvil -->
             <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                 </svg>
             </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4">
             <ul class="flex flex-col space-y-2 items-center text-base">
-                <li><a href="#hero" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
-                <li><a href="#productos" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
-                <li><a href="#contacto" class="block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
+                <li><a href="#hero" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
+                <li><a href="#productos" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
+                <li><a href="#contacto" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
             </ul>
         </div>
     </header>
 
-    <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white pt-16"> <div class="video-background-container">
-            <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="absolute inset-0 bg-black opacity-40 z-10"></div>
-        <div class="container mx-auto px-4 z-20 flex flex-col items-center justify-end h-full pb-8">
-            <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs">
-                Descubre Nuestros Planes
-            </a>
-            <p class="text-xs md:text-sm font-light leading-tight mt-4 mb-0 drop-shadow-lg">
-                Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!
-            </p>
-        </div>
-    </section>
-
-    <section id="productos" class="parallax-section parallax-products py-16 px-4">
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-purple-800 opacity-70 z-10"></div>
-        <div class="container mx-auto text-center z-20 relative">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 drop-shadow-lg">Nuestras Soluciones Web a Medida</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-stretch">
-
-                <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between border-4 border-blue-500">
-                    <div>
-                        <h3 class="text-2xl font-bold text-blue-600 mb-3">Sitio Web Esencial</h3>
-                        <div class="bg-blue-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
-                            <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$120.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
-                        </div>
-                        <div class="text-left text-gray-700 space-y-1 text-sm mb-6">
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dominio por un año (.cl o .com)</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Estrategia SEO básica (palabras clave, meta descripciones)</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Sección para videos (si los proporciona)</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Galería de fotos (optimización de imágenes)</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Diseño responsive y atractivo</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración con redes sociales</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Formulario de contacto</span></div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20el%20Sitio%20Web%20Esencial%20de%20$120.000%20CLP." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm mt-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
-                        </svg>
-                        ¡Lo Quiero Ahora! (WhatsApp)
-                    </a>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold text-purple-600 mb-3">Sitio Web Pro + Carrito</h3>
-                        <div class="bg-purple-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
-                            <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$200.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
-                        </div>
-                        <div class="text-left text-gray-700 space-y-1 text-sm mb-6">
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Todas las características del Plan Esencial</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Carrito de compras integrado</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Cantidad de productos conversable</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración de pasarela de pago</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Optimización avanzada para velocidad</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>La idea es que seas feliz con tu página</span></div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20el%20Sitio%20Web%20Pro%20+%20Carrito%20de%20Compras%20de%20$200.000%20CLP." target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm mt-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
-                        </svg>
-                        ¡Impulsa tus Ventas! (WhatsApp)
-                    </a>
-                </div>
-
-                <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-600 mb-3">Aplicación Web a Medida</h3>
-                        <div class="bg-gray-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
-                            <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$1.000.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
-                        </div>
-                        <div class="text-left text-gray-700 space-y-1 text-sm mb-6">
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Soluciones web personalizadas</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración de APIs y sistemas externos</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bases de datos complejas</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Diseño UX/UI avanzado y a medida</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Escalabilidad y rendimiento</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Soporte y consultoría continua</span></div>
-                            <div class="flex items-center"><svg class="w-4 h-4 text-green-500 mr-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>El precio puede variar según complejidad</span></div>
-                        </div>
-                    </div>
-                    <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20una%20Aplicación%20Web%20a%20Medida." target="_blank" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm mt-auto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-1">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
-                        </svg>
-                        ¡Quiero mi Aplicación a Medida!
-                    </a>
-                </div>
-
+    <main>
+        <!-- Sección Hero con Video de Fondo -->
+        <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white">
+            <div class="video-background-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY&controls=0&showinfo=0&autohide=1" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
             </div>
-        </div>
-    </section>
+            <!-- Superposición para legibilidad -->
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            <!-- Contenido del Hero -->
+            <div class="relative z-10 container mx-auto px-4 flex flex-col items-center justify-end h-full pb-8">
+                <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs">
+                    Descubre Nuestros Planes
+                </a>
+                <p class="text-xs md:text-sm font-light leading-tight mt-4 mb-0 drop-shadow-lg max-w-xl">
+                    Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!
+                </p>
+            </div>
+        </section>
 
+        <!-- Sección de Productos con Parallax -->
+        <section id="productos" class="parallax-section parallax-products py-16 px-4">
+            <!-- Superposición de color -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-purple-800 opacity-70 z-0"></div>
+            <div class="container mx-auto text-center relative z-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 drop-shadow-lg">Nuestras Soluciones Web a Medida</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center items-stretch">
+
+                    <!-- Producto 1: Sitio Web Esencial -->
+                    <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between border-4 border-blue-500">
+                        <div>
+                            <h3 class="text-2xl font-bold text-blue-600 mb-3">Sitio Web Esencial</h3>
+                            <div class="bg-blue-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
+                                <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$120.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
+                            </div>
+                            <ul class="text-left text-gray-700 space-y-1 text-sm mb-6">
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dominio por un año (.cl o .com)</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Estrategia SEO básica (palabras clave, meta descripciones)</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Sección para videos (si los proporciona)</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Galería de fotos (optimización de imágenes)</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Diseño responsive y atractivo</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración con redes sociales</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Formulario de contacto</span></li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20el%20Sitio%20Web%20Esencial%20de%20$120.000%20CLP." target="_blank" class="w-full mt-auto bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>
+                            ¡Lo Quiero Ahora! (WhatsApp)
+                        </a>
+                    </div>
+
+                    <!-- Producto 2: Sitio Web Pro -->
+                    <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-purple-600 mb-3">Sitio Web Pro + Carrito</h3>
+                            <div class="bg-purple-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
+                                <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$200.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
+                            </div>
+                            <ul class="text-left text-gray-700 space-y-1 text-sm mb-6">
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Todas las características del "Sitio Web Esencial"</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Carrito de compras integrado</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Cantidad de productos conversable</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración de pasarela de pago (ej. Transbank)</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Optimización avanzada para velocidad</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>La idea es que seas feliz con tu página web nueva</span></li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20el%20Sitio%20Web%20Pro%20+%20Carrito%20de%20Compras%20de%20$200.000%20CLP." target="_blank" class="w-full mt-auto bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>
+                            ¡Impulsa tus Ventas! (WhatsApp)
+                        </a>
+                    </div>
+
+                    <!-- Producto 3: Aplicación Web a Medida -->
+                    <div class="bg-white rounded-lg shadow-xl p-6 transform hover:scale-105 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-600 mb-3">Aplicación Web a Medida</h3>
+                            <div class="bg-gray-100 p-2 rounded-md block mx-auto mb-4 shadow-inner">
+                                <p class="text-2xl font-extrabold text-green-600 whitespace-nowrap text-center">$1.000.000 <span class="text-base text-gray-500 font-normal">CLP</span></p>
+                            </div>
+                            <ul class="text-left text-gray-700 space-y-1 text-sm mb-6">
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Desarrollo de soluciones web personalizadas</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Integración de APIs y sistemas externos</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Bases de datos complejas y gestión de datos</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Diseño UX/UI avanzado y a medida</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Escalabilidad y rendimiento optimizado</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Consultoría y soporte continuo</span></li>
+                                <li class="flex items-start"><svg class="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dependiendo de la complejidad, el precio puede variar</span></li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20una%20Aplicación%20Web%20a%20Medida." target="_blank" class="w-full mt-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-sm">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>
+                            ¡Quiero mi Aplicación a Medida!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página / Contacto -->
     <footer id="contacto" class="bg-gray-900 text-white py-12 px-4">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="flex flex-col items-center text-center">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <!-- Columna de Contacto -->
+            <div>
                 <h3 class="text-xl font-bold mb-4 text-blue-400">Contacto</h3>
                 <p class="mb-2 text-sm">Email: <a href="mailto:octavoconjunto@gmail.com" class="text-blue-300 hover:underline">octavoconjunto@gmail.com</a></p>
                 <p class="mb-2 text-sm">Teléfono: <a href="tel:+56964479483" class="text-blue-300 hover:underline">+56 9 6447 9483</a></p>
-                <p class="text-sm">Dirección: En los Andes chilenos por Llancalil, Huife, Pucón. Conectado a traves de Starlink.</p>
+                <p class="text-sm text-gray-400">En los Andes chilenos por Llancalil, Huife, Pucón. Conectado a traves de Starlink.</p>
             </div>
 
-            <div class="flex flex-col items-center text-center">
+            <!-- Columna de Redes Sociales -->
+            <div>
                 <h3 class="text-xl font-bold mb-4 text-blue-400">Síguenos en Instagram</h3>
-                <div class="flex justify-center space-x-2">
-                    <a href="https://www.instagram.com/hagamosnegocioshoy/" target="_blank" class="text-white hover:text-pink-500 transition duration-300 p-1 rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-500 shadow-lg transform hover:scale-110">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.914.354 4.072.784c-.823.43-1.547 1.059-2.11 1.623-.564.564-1.092 1.29-1.521 2.11-.429.84-.651 1.7-.71 2.973C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.282 2.138.712 2.97-.43.823 1.059 1.547 1.623 2.11.564.564 1.29 1.092 2.11 1.521.84.429 1.7.651 2.973.71C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.138-.282 2.97-.712.823-.43 1.547-1.059 2.11-1.623.564-.564 1.092-1.29 1.521-2.11.429-.84.651 1.7.71-2.973.058-1.277.072-1.684.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.282-2.138-.712-2.97-.43-.823-1.059-1.547-1.623-2.11-.564-.564-1.29-1.092-2.11-1.521-.84-.429-1.7-.651-2.973-.71C15.667.014 15.26 0 12 0zm0 2.16c3.2 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.465.377.19.648.417.92.689.271.271.498.543.689.92.216.422.409 1.057.465 2.228.056 1.265.07 1.64.07 4.85s-.014 3.585-.07 4.85c-.056 1.17-.249 1.805-.465 2.227-.19.377-.417.648-.689.92-.271.271-.498.543-.689.92-.422.216-1.057-.409-2.228.465-1.265.056-1.64.07-4.85.07s-3.585-.014-4.85-.07c-1.17-.056-1.805-.249-2.227-.465-.377-.19-.648-.417-.92-.689-.271-.271-.498-.543-.689.92-.216-.422-.409-1.057-.465-2.228-.056-1.265-.07-1.64-.07-4.85s.014-3.585.07-4.85c.056-1.17.249-1.805.465-2.227.19-.377.417-.648.689-.92.271-.271.543-.498.92-.689.422-.216 1.057-.409 2.228-.465C8.333 2.176 8.74 2.16 12 2.16zm0 3.635c-3.402 0-6.16 2.758-6.16 6.16s2.758 6.16 6.16 6.16 6.16-2.758 6.16-6.16-2.758-6.16-6.16-6.16zm0 10.16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z" clip-rule="evenodd" />
-                        </svg>
+                <div class="flex justify-center mb-2">
+                    <a href="https://www.instagram.com/hagamosnegocioshoy/" target="_blank" class="text-white hover:opacity-80 transition-opacity duration-300 p-1 rounded-full bg-gradient-to-br from-purple-600 via-pink-500 to-yellow-500 shadow-lg transform hover:scale-110">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 0C8.74 0 8.333.014 7.053.072 5.775.132 4.914.354 4.072.784c-.823.43-1.547 1.059-2.11 1.623-.564.564-1.092 1.29-1.521 2.11-.429.84-.651 1.7-.71 2.973C.014 8.333 0 8.74 0 12s.014 3.667.072 4.947c.06 1.277.282 2.138.712 2.97-.43.823 1.059 1.547 1.623 2.11.564.564 1.29 1.092 2.11 1.521.84.429 1.7.651 2.973.71C8.333 23.986 8.74 24 12 24s3.667-.014 4.947-.072c1.277-.06 2.138-.282 2.97-.712.823-.43 1.547-1.059 2.11-1.623.564-.564 1.092-1.29 1.521-2.11.429-.84.651 1.7.71-2.973.058-1.277.072-1.684.072-4.947s-.014-3.667-.072-4.947c-.06-1.277-.282-2.138-.712-2.97-.43-.823-1.059-1.547-1.623-2.11-.564-.564-1.29-1.092-2.11-1.521-.84-.429-1.7-.651-2.973-.71C15.667.014 15.26 0 12 0zm0 2.16c3.2 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.465.377.19.648.417.92.689.271.271.498.543.689.92.216.422.409 1.057.465 2.228.056 1.265.07 1.64.07 4.85s-.014 3.585-.07 4.85c-.056 1.17-.249 1.805-.465 2.227-.19.377-.417.648-.689.92-.271.271-.498.543-.689.92-.422.216-1.057-.409-2.228.465-1.265.056-1.64.07-4.85.07s-3.585-.014-4.85-.07c-1.17-.056-1.805-.249-2.227-.465-.377-.19-.648-.417-.92-.689-.271-.271-.498.543-.689.92-.216-.422-.409-1.057-.465-2.228-.056-1.265-.07-1.64-.07-4.85s.014-3.585.07-4.85c.056-1.17.249-1.805.465-2.227.19-.377.417-.648.689-.92.271-.271.543-.498.92-.689.422-.216 1.057-.409 2.228-.465C8.333 2.176 8.74 2.16 12 2.16zm0 3.635c-3.402 0-6.16 2.758-6.16 6.16s2.758 6.16 6.16 6.16 6.16-2.758 6.16-6.16-2.758-6.16-6.16-6.16zm0 10.16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.44-.645 1.44-1.44s-.645-1.44-1.44-1.44z" clip-rule="evenodd" /></svg>
                     </a>
                 </div>
-                <p class="text-base mt-2 text-gray-400 font-semibold">@hagamosnegocioshoy</p>
-                <p class="text-sm mt-2 text-white font-medium glow-text">¡Qué esperas para invertir en tu futuro! Tu futuro comienza hoy!</p>
+                <p class="text-base text-gray-400 font-semibold mb-2">@hagamosnegocioshoy</p>
+                <p class="text-sm font-medium glow-text">¡Qué esperas para invertir en tu futuro! Tu futuro comienza hoy!</p>
             </div>
 
-            <div class="flex flex-col items-center text-center">
+            <!-- Columna de Llamada a la Acción -->
+            <div>
                 <h3 class="text-xl font-bold mb-4 text-blue-400">¿Listo para Empezar?</h3>
                 <p class="text-base font-semibold text-white mb-3">
                     ¡Aprovecha de contactarme! Haré un número limitado de páginas web. No pierdas la oportunidad.
                 </p>
-                <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20tener%20mi%20página%20web!" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full shadow-md transition duration-300 transform hover:scale-105 flex items-center justify-center text-base">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/>
-                    </svg>
+                <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20tener%20mi%20página%20web!" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full shadow-md transition duration-300 transform hover:scale-105 inline-flex items-center justify-center text-base">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>
                     ¡Contáctame!
                 </a>
             </div>
         </div>
-        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500">
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">
             &copy; 2025 Plataformas Digitales. Todos los derechos reservados.
         </div>
     </footer>
@@ -270,23 +298,31 @@
         // JavaScript para el menú móvil
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
+        // Cierra el menú móvil cuando se hace clic en un enlace
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
         // JavaScript para el scroll suave (Smooth Scrolling)
+        // La clase 'scroll-smooth' en la etiqueta <html> ya maneja esto para la mayoría de los navegadores modernos.
+        // Este script es un respaldo y asegura que los clics en los enlaces del menú móvil también funcionen correctamente.
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Cierra el menú móvil si está abierto después de hacer clic
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
