@@ -105,34 +105,35 @@
     <!-- Encabezado Fijo con Glassmorphism -->
     <header class="bg-blue-200/75 backdrop-blur-md shadow-lg rounded-b-lg py-1 px-6 fixed w-full top-0 z-40">
         <nav class="container mx-auto grid grid-cols-3 items-center">
-            <!-- Columna Izquierda: Links (Visible en Desktop) -->
-            <div class="hidden md:flex justify-start">
-                <ul class="flex space-x-4 text-sm">
-                    <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
-                    <li><a href="#productos" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
-                    <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
+            <!-- Columna Izquierda: Links (Desktop) y Botón Menú (Móvil) -->
+            <div class="flex justify-start">
+                <ul class="hidden md:flex space-x-4 text-sm">
+                    <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Inicio</a></li>
+                    <li><a href="#productos" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Productos</a></li>
+                    <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Contacto</a></li>
                 </ul>
+                <button id="mobile-menu-button" class="md:hidden flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <span class="text-sm font-medium">Menu</span>
+                </button>
             </div>
             
             <!-- Columna Central: Logo -->
-            <div class="flex md:justify-center justify-start col-start-1 md:col-start-2">
+            <div class="flex justify-center">
                 <a href="#hero" class="text-xl font-bold text-blue-600">
                     <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block opacity-75 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
                 </a>
             </div>
 
-            <!-- Columna Derecha: Carrito y Botón Móvil -->
-            <div class="flex justify-end items-center space-x-4 col-start-3">
-                 <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="hidden md:inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105 text-sm">
+            <!-- Columna Derecha: Carrito y Botón de Acción -->
+            <div class="flex justify-end items-center space-x-2 sm:space-x-4">
+                 <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-2 sm:py-2 sm:px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105 text-xs sm:text-sm">
                     <span>¡Hagamos Negocios!</span>
                 </a>
                 <div id="cart-icon-container" class="relative cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
             </div>
         </nav>
         <div id="mobile-menu" class="hidden md:hidden bg-blue-200/75 backdrop-blur-md pb-4 rounded-b-lg">
@@ -140,11 +141,6 @@
                 <li><a href="#hero" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
                 <li><a href="#productos" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
                 <li><a href="#contacto" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
-                <li class="w-full px-4 pt-2">
-                    <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="w-full inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 text-sm">
-                        ¡Hagamos Negocios!
-                    </a>
-                </li>
             </ul>
         </div>
     </header>
