@@ -114,18 +114,18 @@
     </div>
 
     <!-- Encabezado Fijo con Glassmorphism -->
-    <header class="bg-blue-200/75 backdrop-blur-md shadow-lg rounded-b-lg py-1 px-6 fixed w-full top-0 z-40">
+    <header class="bg-sky-500/20 backdrop-blur-md shadow-lg rounded-b-lg py-1 px-6 fixed w-full top-0 z-40">
         <nav class="container mx-auto grid grid-cols-3 items-center">
             <!-- Columna Izquierda: Links (Desktop) y Botón Menú (Móvil) -->
             <div class="flex justify-start">
                 <ul class="hidden md:flex space-x-4 text-sm">
-                    <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Inicio</a></li>
-                    <li><a href="#productos" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Productos</a></li>
-                    <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300 font-medium">Contacto</a></li>
+                    <li><a href="#hero" class="text-white hover:text-sky-200 transition duration-300 font-semibold strong-text-shadow">Inicio</a></li>
+                    <li><a href="#productos" class="text-white hover:text-sky-200 transition duration-300 font-semibold strong-text-shadow">Productos</a></li>
+                    <li><a href="#contacto" class="text-white hover:text-sky-200 transition duration-300 font-semibold strong-text-shadow">Contacto</a></li>
                 </ul>
-                <button id="mobile-menu-button" class="md:hidden flex items-center space-x-1 text-gray-700 hover:text-blue-600">
+                <button id="mobile-menu-button" class="md:hidden flex items-center space-x-1 text-white hover:text-sky-200">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    <span class="text-sm font-medium">Menu</span>
+                    <span class="text-sm font-semibold strong-text-shadow">Menu</span>
                 </button>
             </div>
             
@@ -142,16 +142,16 @@
                     <span>¡Hagamos Negocios!</span>
                 </a>
                 <div id="cart-icon-container" class="relative cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hover:text-sky-200" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
                 </div>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-blue-200/75 backdrop-blur-md pb-4 rounded-b-lg">
+        <div id="mobile-menu" class="hidden md:hidden bg-sky-500/75 backdrop-blur-md pb-4 rounded-b-lg">
             <ul class="flex flex-col space-y-2 items-center text-base">
-                <li><a href="#hero" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
-                <li><a href="#productos" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
-                <li><a href="#contacto" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
+                <li><a href="#hero" class="mobile-link block py-2 text-white hover:text-sky-200 transition duration-300">Inicio</a></li>
+                <li><a href="#productos" class="mobile-link block py-2 text-white hover:text-sky-200 transition duration-300">Productos</a></li>
+                <li><a href="#contacto" class="mobile-link block py-2 text-white hover:text-sky-200 transition duration-300">Contacto</a></li>
             </ul>
         </div>
     </header>
@@ -164,7 +164,9 @@
             </div>
             <div class="relative z-30 container mx-auto px-4 flex flex-col items-center justify-end h-full pb-8">
                 <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs strong-text-shadow">Descubre Nuestros Planes</a>
-                <p class="text-xs md:text-sm font-light leading-tight mt-4 mb-0 max-w-xl strong-text-shadow">Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!</p>
+                <div class="mt-4 max-w-xl bg-sky-500/30 backdrop-blur-md border border-sky-400/50 rounded-xl p-4">
+                    <p class="text-xs md:text-sm font-light leading-tight strong-text-shadow">Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!</p>
+                </div>
             </div>
         </section>
 
