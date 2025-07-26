@@ -103,19 +103,30 @@
     </div>
 
     <!-- Encabezado Fijo con Glassmorphism -->
-    <header class="bg-white/75 backdrop-blur-md shadow-md py-1 px-6 fixed w-full top-0 z-40">
-        <nav class="container mx-auto flex justify-between items-center">
-            <a href="#hero" class="text-xl font-bold text-blue-600">
-                <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block mr-2 opacity-75 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
-            </a>
-            <div class="flex items-center space-x-4">
-                <ul class="hidden md:flex space-x-4 text-sm">
+    <header class="bg-blue-200/75 backdrop-blur-md shadow-lg rounded-b-lg py-1 px-6 fixed w-full top-0 z-40">
+        <nav class="container mx-auto grid grid-cols-3 items-center">
+            <!-- Columna Izquierda: Links (Visible en Desktop) -->
+            <div class="hidden md:flex justify-start">
+                <ul class="flex space-x-4 text-sm">
                     <li><a href="#hero" class="text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
                     <li><a href="#productos" class="text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
                     <li><a href="#contacto" class="text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
                 </ul>
-                <!-- Icono del Carrito -->
-                <div id="cart-icon-container" class="relative cursor-pointer ml-4">
+            </div>
+            
+            <!-- Columna Central: Logo -->
+            <div class="flex md:justify-center justify-start col-start-1 md:col-start-2">
+                <a href="#hero" class="text-xl font-bold text-blue-600">
+                    <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block opacity-75 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
+                </a>
+            </div>
+
+            <!-- Columna Derecha: Carrito y Botón Móvil -->
+            <div class="flex justify-end items-center space-x-4 col-start-3">
+                 <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="hidden md:inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105 text-sm">
+                    <span>¡Hagamos Negocios!</span>
+                </a>
+                <div id="cart-icon-container" class="relative cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700 hover:text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                     <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">0</span>
                 </div>
@@ -124,11 +135,16 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden bg-white/75 backdrop-blur-md pb-4">
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-200/75 backdrop-blur-md pb-4 rounded-b-lg">
             <ul class="flex flex-col space-y-2 items-center text-base">
                 <li><a href="#hero" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Inicio</a></li>
                 <li><a href="#productos" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Productos</a></li>
                 <li><a href="#contacto" class="mobile-link block py-2 text-gray-700 hover:text-blue-600 transition duration-300">Contacto</a></li>
+                <li class="w-full px-4 pt-2">
+                    <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="w-full inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow-md transition duration-300 text-sm">
+                        ¡Hagamos Negocios!
+                    </a>
+                </li>
             </ul>
         </div>
     </header>
@@ -227,8 +243,13 @@
             </div>
             <div>
                 <h3 class="text-xl font-bold mb-4 text-blue-400">¿Listo para Empezar?</h3>
-                <p class="text-base font-semibold text-white mb-3">¡Aprovecha de contactarme! Haré un número limitado de páginas web. No pierdas la oportunidad.</p>
-                <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20tener%20mi%20página%20web!" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full shadow-md transition duration-300 transform hover:scale-105 inline-flex items-center justify-center text-base"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>¡Contáctame!</a>
+                <p class="text-base font-semibold text-white mb-3">
+                    ¡Aprovecha de contactarme! Haré un número limitado de páginas web. No pierdas la oportunidad.
+                </p>
+                <a href="https://wa.me/56964479483?text=Hola,%20me%20interesa%20tener%20mi%20página%20web!" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full shadow-md transition duration-300 transform hover:scale-105 inline-flex items-center justify-center text-base">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.911C.15 5.183 5.184.15 11.217.15c3.179 0 6.136 1.233 8.47 3.565 2.333 2.335 3.567 5.292 3.566 8.472 0 6.03-5.035 11.063-11.065 11.063-1.954 0-3.896-.538-5.592-1.562l-6.052 1.66zm6.597-3.807c1.676.995 3.276 1.594 5.392 1.594 5.23 0 9.544-4.214 9.546-9.448 0-5.23-4.214-9.543-9.448-9.543-5.23 0-9.543 4.214-9.543 9.448 0 1.742.5 3.45 1.457 4.901l.607 1.027-1.762 6.378 6.378-1.765-.995.607zm7.5-6.893c-.381-.187-2.25-.977-2.606-1.09-.356-.113-.614-.169-.872.169-.258.338-.995 1.265-1.229 1.523-.234.258-.469.29-.872.113-.403-.18-1.71-1.054-3.26-2.011-1.235-.78-2.067-2.071-2.301-2.474-.234-.403-.026-.622.148-.791.16-.153.356-.403.535-.602.18-.199.234-.338.356-.562.113-.234.057-.433-.026-.602-.084-.17-.791-1.898-1.083-2.596-.282-.685-.575-.591-.791-.599-.199-.007-.433-.007-.667-.007-.234 0-.614.084-.949.403-.335.319-1.275 1.235-1.275 2.992 0 1.756 1.301 3.464 1.867 4.164.566.701 2.606 3.999 6.203 5.429 3.597 1.43 3.597.953 4.232.896.635-.057 2.067-.847 2.362-1.679.295-.847.295-1.571.207-1.756-.084-.184-.319-.295-.667-.464z"/></svg>
+                    ¡Contáctame!
+                </a>
             </div>
         </div>
         <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-500 text-sm">&copy; 2025 Plataformas Digitales. Todos los derechos reservados.</div>
