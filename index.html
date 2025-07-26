@@ -41,16 +41,27 @@
         ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
         ::-webkit-scrollbar-thumb:hover { background: #555; }
-        .parallax-section {
-            background-attachment: fixed;
-            background-position: center;
-            background-size: cover;
+        
+        #productos {
             position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
-        .parallax-products {
-            /* Imagen de código para el efecto parallax */
+        #productos::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background-image: url('pantallaconcodigoparaparallax.jpeg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            transform: translateY(var(--parallax-y, 0px));
+            will-change: transform;
         }
+
         .whatsapp-float { animation: pulse 2s infinite; }
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -71,17 +82,17 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 300%; /* Ancho aumentado para cubrir aspect ratios altos */
-            height: 150%; /* Altura aumentada para cubrir aspect ratios altos */
+            width: 300%; 
+            height: 150%;
             transform: translate(-50%, -50%); 
             pointer-events: none;
-            opacity: 0; /* Inicia invisible */
-            transition: opacity 0.5s ease-in-out; /* Transición suave */
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
         .video-background-container iframe.loaded {
-            opacity: 1; /* Se hace visible cuando carga */
+            opacity: 1;
         }
-        /* Estilos para la notificación */
+        
         #toast-notification {
             transition: opacity 0.5s, transform 0.5s;
         }
@@ -158,7 +169,7 @@
         </section>
 
         <!-- Sección de Productos -->
-        <section id="productos" class="parallax-section parallax-products py-16 px-4">
+        <section id="productos" class="py-16 px-4">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-800 to-purple-800 opacity-70 z-0"></div>
             <div class="container mx-auto text-center relative z-10">
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-10 drop-shadow-lg">Nuestras Soluciones Web a Medida</h2>
@@ -400,7 +411,19 @@
             }
         });
 
-        // --- Scroll Suave ---
+        // --- Scroll Suave y Parallax ---
+        document.addEventListener('scroll', () => {
+            const parallaxSection = document.getElementById('productos');
+            if (parallaxSection) {
+                const rect = parallaxSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const speed = -0.3;
+                    const yPos = rect.top * speed;
+                    parallaxSection.style.setProperty('--parallax-y', `${yPos}px`);
+                }
+            }
+        });
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
