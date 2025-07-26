@@ -44,14 +44,12 @@
         .parallax-section {
             background-attachment: fixed;
             background-position: center;
+            background-size: cover;
             position: relative;
         }
         .parallax-products {
             /* Imagen de código para el efecto parallax */
             background-image: url('pantallaconcodigoparaparallax.jpeg');
-            background-size: contain; /* Ajustado para evitar zoom excesivo */
-            background-repeat: repeat;
-            background-color: #1a202c; /* Color de fondo para rellenar */
         }
         .whatsapp-float { animation: pulse 2s infinite; }
         @keyframes pulse {
@@ -67,7 +65,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            z-index: 1; /* Video por encima de la imagen de fondo */
+            z-index: 1; 
         }
         .video-background-container iframe {
             position: absolute;
@@ -79,6 +77,11 @@
             min-height: 100%;
             transform: translate(-50%, -50%) scale(1.6); 
             pointer-events: none;
+            opacity: 0; /* Inicia invisible */
+            transition: opacity 0.5s ease-in-out; /* Transición suave */
+        }
+        .video-background-container iframe.loaded {
+            opacity: 1; /* Se hace visible cuando carga */
         }
         @media (max-width: 768px) {
             .parallax-section {
@@ -156,7 +159,7 @@
         <!-- Sección Hero -->
         <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('fondo universo.JPG');">
             <div class="video-background-container">
-                <iframe src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY&controls=0&showinfo=0&autohide=1" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+                <iframe id="hero-video" src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY&controls=0&showinfo=0&autohide=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
             </div>
             <div class="relative z-30 container mx-auto px-4 flex flex-col items-center justify-end h-full pb-8">
                 <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs strong-text-shadow">Descubre Nuestros Planes</a>
@@ -283,6 +286,7 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
         // --- Elementos del DOM ---
+        const heroVideo = document.getElementById('hero-video');
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -295,6 +299,15 @@
         const cartTotal = document.getElementById('cart-total');
         const clearCartBtn = document.getElementById('clear-cart-btn');
         const toastNotification = document.getElementById('toast-notification');
+
+        // --- Lógica para mostrar el video cuando esté listo ---
+        heroVideo.addEventListener('load', () => {
+             // Pequeña demora para asegurar que el video comience a renderizarse
+            setTimeout(() => {
+                heroVideo.classList.add('loaded');
+            }, 500);
+        });
+
 
         // --- Datos de Productos ---
         const products = {
