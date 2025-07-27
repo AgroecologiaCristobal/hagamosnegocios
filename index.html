@@ -37,6 +37,7 @@
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
         }
+        /* Scrollbar general */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
         ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
@@ -97,7 +98,23 @@
             transition: opacity 0.5s, transform 0.5s;
         }
         .strong-text-shadow {
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+        }
+
+        /* Scrollbar para el recuadro de texto del Hero */
+        .hero-text-box::-webkit-scrollbar {
+            width: 5px;
+        }
+        .hero-text-box::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .hero-text-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+        }
+        .hero-text-box::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
@@ -115,9 +132,9 @@
 
     <!-- Encabezado Fijo con Glassmorphism -->
     <header class="bg-sky-500/20 backdrop-blur-md shadow-lg rounded-b-lg py-1 px-6 fixed w-full top-0 z-40">
-        <nav class="container mx-auto grid grid-cols-3 items-center">
-            <!-- Columna Izquierda: Links (Desktop) y Botón Menú (Móvil) -->
-            <div class="flex justify-start">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Izquierda: Menú/Links -->
+            <div class="flex-1 flex justify-start">
                 <ul class="hidden md:flex space-x-4 text-sm">
                     <li><a href="#hero" class="text-white hover:text-sky-200 transition duration-300 font-semibold strong-text-shadow">Inicio</a></li>
                     <li><a href="#productos" class="text-white hover:text-sky-200 transition duration-300 font-semibold strong-text-shadow">Productos</a></li>
@@ -129,15 +146,15 @@
                 </button>
             </div>
             
-            <!-- Columna Central: Logo -->
-            <div class="flex justify-center">
+            <!-- Centro: Logo -->
+            <div class="flex-shrink-0">
                 <a href="#hero" class="text-xl font-bold text-blue-600">
                     <img src="hagamos negocios.png" alt="Logo Hagamos Negócios.cl" class="h-12 md:h-16 inline-block opacity-75 hover:opacity-100 transition-opacity duration-300" onerror="this.onerror=null;this.src='https://placehold.co/200x64/ffffff/1d4ed8?text=Logo';">
                 </a>
             </div>
 
-            <!-- Columna Derecha: Carrito y Botón de Acción -->
-            <div class="flex justify-end items-center space-x-2 sm:space-x-4">
+            <!-- Derecha: Acciones -->
+            <div class="flex-1 flex justify-end items-center space-x-2 sm:space-x-4">
                  <a href="https://wa.me/56964479483?text=Hola,%20estoy%20listo%20para%20que%20hagamos%20negocios." target="_blank" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-1 px-2 sm:py-2 sm:px-4 rounded-full shadow-md transition duration-300 transform hover:scale-105 text-xs sm:text-sm">
                     <span>¡Hagamos Negocios!</span>
                 </a>
@@ -160,12 +177,11 @@
         <!-- Sección Hero -->
         <section id="hero" class="relative h-screen flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('fondo universo.JPG');">
             <div class="video-background-container">
-                <iframe id="hero-video" src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY&controls=0&showinfo=0&autohide=1&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+                <iframe id="hero-video" src="https://www.youtube-nocookie.com/embed/3qjeKkBD_LY?autoplay=1&loop=1&mute=1&playsinline=1&playlist=3qjeKkBD_LY&controls=0&showinfo=0&autohide=1" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
             </div>
             <div class="relative z-30 container mx-auto px-4 flex flex-col items-center justify-end h-full pb-8">
-                <a href="#productos" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded-full shadow-lg transition duration-300 transform hover:scale-105 text-xs strong-text-shadow">Descubre Nuestros Planes</a>
-                <div class="mt-4 max-w-xl bg-sky-500/30 backdrop-blur-md border border-sky-400/50 rounded-xl p-4">
-                    <p class="text-xs md:text-sm font-light leading-tight strong-text-shadow">Tu Página web Buena, Bonita y Barata! Soy Cristobal Hernandez y quiero ayudarte a crecer comercialmente! Necesitas pagina web? Una propiedad en el sur de chile? Hagamos Negocios!</p>
+                <div id="hero-text-box" tabindex="0" class="max-w-xl bg-sky-500/30 backdrop-blur-md border border-sky-400/50 rounded-xl px-4 py-2 max-h-14 overflow-y-auto hero-text-box focus:outline-none focus:ring-2 focus:ring-sky-300/50 shadow-2xl">
+                    <p class="text-xs md:text-sm font-light leading-tight strong-text-shadow">Soy Cristobal Hernandez y quiero ayudarte a crecer comercial e interiormente! Necesitas una pagina web? Una propiedad en el sur de chile? Invertir en mi proximo resort del bienestar? Aprender a ser agroecologico y sustentable?o a crear activos digitales? o de bioconstruccion y eficiencia energetica? Tambien puedes solicitar una asesoria conmigo, o si quieres saber mas sobre mi direccion como presidente en nuestro club deportivo la gran familia, bienvenido a mi mundo! Hagamos Negocios?</p>
                 </div>
             </div>
         </section>
@@ -302,6 +318,7 @@
         const cartTotal = document.getElementById('cart-total');
         const clearCartBtn = document.getElementById('clear-cart-btn');
         const toastNotification = document.getElementById('toast-notification');
+        const heroTextBox = document.getElementById('hero-text-box');
 
         // --- Lógica para mostrar el video cuando esté listo ---
         heroVideo.addEventListener('load', () => {
@@ -434,6 +451,22 @@
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 }
             });
+        });
+
+        // --- Control de Scroll para el Recuadro de Texto del Hero ---
+        heroTextBox.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            heroTextBox.scrollTop += e.deltaY / 8; // Reduce la velocidad del scroll a un octavo
+        });
+
+        heroTextBox.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                heroTextBox.scrollTop -= 20; // Desplaza hacia arriba
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                heroTextBox.scrollTop += 20; // Desplaza hacia abajo
+            }
         });
         
         // Inicializar vista del carrito
