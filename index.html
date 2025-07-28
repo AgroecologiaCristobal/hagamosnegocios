@@ -471,6 +471,48 @@
         
         // Inicializar vista del carrito
         updateCart();
+
+        // --- Animación de la Historia Interactiva ---
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const timelineLine = document.getElementById('timeline-line');
+        
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('opacity-0', '-translate-x-20', 'translate-x-20');
+                    entry.target.classList.add('opacity-100', 'translate-x-0');
+                }
+            });
+        }, observerOptions);
+
+        // Observar cada elemento de la línea de tiempo
+        timelineItems.forEach((item) => {
+            timelineObserver.observe(item);
+        });
+
+        // Animación de la línea vertical
+        const updateTimelineLine = () => {
+            const historiaSection = document.getElementById('historia');
+            if (!historiaSection) return;
+            
+            const rect = historiaSection.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (rect.top < windowHeight && rect.bottom > 0) {
+                const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+                const maxHeight = historiaSection.scrollHeight * 0.8;
+                timelineLine.style.height = `${maxHeight * progress}px`;
+            }
+        };
+
+        // Actualizar línea en scroll
+        window.addEventListener('scroll', updateTimelineLine);
+        updateTimelineLine(); // Inicializar
     });
     </script>
 </body>
